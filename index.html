@@ -9,20 +9,55 @@
 				height:100%;
 			}
 			body{
-				background:darkblue url("fondo.jpg") no-repeat;
+				/*background:darkblue url("fondo.jpg") no-repeat;*/
+			}
+			.fondo{
+				height:100%;
+				position:absolute;
+				width:100%;
+			}
+			#f1{
+				background:url("fondo1.jpg") no-repeat;;
 				background-size:cover;
+				position:fixed;
+				z-index:1;
+			}
+			#f2{
+				background:url("fondo2.png") no-repeat;;
+				background-size:cover;
+				position:fixed;
+				z-index:2;
+			}
+			#f3{
+				background:url("fondo3.png") no-repeat;;
+				background-size:cover;
+				position:fixed;
+				z-index:3;
+			}
+			#f4{
+				background:url("fondo4.png");
+				background-size:100% 100%;
+				position:fixed;
+				z-index:5;
 			}
 			.mensaje{
 
 				background:rgba(255,255,255,0.4);
 				color:#FFF;
 				padding:0.8em;
+				position:fixed;
 				text-shadow:0 0 0.3em rgba(0,0,0,0.5);
+				z-index:4;
 			}
 	</style>
 </head>
 <body>
 	<br>
+	<div id="f1" class="fondo"></div>
+	<div id="f2" class="fondo"></div>
+	<div id="f3" class="fondo"></div>
+	<div id="f4" class="fondo"></div>
+
 	<div class="mensaje">
 		<h1>Reunión se abrirá por ZOOM, Agosto 01 2020, 08:00pm</h1>
 	</div>
@@ -31,7 +66,25 @@
 			document.onmousemove=function(e){
 				var x=-e.clientX/20;
 				var y=-e.clientY/20;
-				document.body.style.backgroundPosition=x+'px '+y+'px';
+
+				var x1=-e.clientX/10;
+				var y1=-e.clientY/10;
+
+
+				var x2=-e.clientX/8;
+				var y2=-e.clientY/8;
+
+
+				var x3=-e.clientX/5;
+				var y3=-e.clientY/5;
+				//document.body.style.backgroundPosition=x+'px '+y+'px';
+				document.getElementById('f1').style.backgroundPosition=x+'px '+y+'px';
+
+				document.getElementById('f2').style.backgroundPosition=x1+'px '+y1+'px';
+
+				document.getElementById('f3').style.backgroundPosition=x2+'px '+y2+'px';
+
+				//document.getElementById('f1').style.backgroundPosition=x+'px '+y+'px';
 			}
 
 			/*setTimeout(function(){
