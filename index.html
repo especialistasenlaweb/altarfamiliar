@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Altar</title>
+	<style>	
+			html,body{
+				margin:0 auto;
+				height:100%;
+			}
+			body{
+				background:darkblue url("fondo.jpg") no-repeat;
+				background-size:cover;
+			}
+	</style>
+</head>
+<body>
+	<br>
+	<div class="mensaje">
+		<h1>Reunión se abrirá por ZOOM, Agosto 01 2020, 08:00pm</h1>
+	</div>
+	<script>	
+		window.onload=function(){
+			document.onmousemove=function(e){
+				var x=-e.clientX/20;
+				var y=-e.clientY/20;
+				document.body.style.backgroundPosition=x+'px '+y+'px';
+			}
+
+			/*setTimeout(function(){
+			 location="https://us04web.zoom.us/j/78329988894?pwd=NTg3N2J6UmJaSW50d0FzSmxNeVBBZz09"
+			}, 20000);*/
+		}
+	</script>
+</body>
+</html>
